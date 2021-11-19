@@ -157,12 +157,12 @@ async def kang_(message: Message):
                             await message.delete()
                         else:
                             out = (
-                                "__Aka Ne Tum Noob Ko Link dene se na boke hai🙂__"
+                                "__Aka Ne Tum Noob Ko Link dene se na bole hai🙂__"
                                 if "-s" in message.flags
                                 else f"[Yaha](t.me/addstickers/{packname})"
                             )
                             await message.edit(
-                                f"**Aka sticker leliya hai🤓.Hame sticker yaha milega👉** {out} _Dusri jaga rakha hai sticker pehli jaga full hogay thi aka😅__**!**"
+                                f"**Aka sticker leliya hai🤓.Hame sticker yaha milega👉** {out} _Dusri jaga rakha hai sticker, pehli jaga full hogay thi aka😅__**!**"
                             )
                         return
                 await conv.send_document(photo)
