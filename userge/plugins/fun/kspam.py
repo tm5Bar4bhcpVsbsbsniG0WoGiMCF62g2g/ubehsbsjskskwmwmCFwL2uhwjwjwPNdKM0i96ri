@@ -21,7 +21,7 @@ S_LOG = userge.getCLogger(__name__)
 async def kspam(message: Message):
     if len(message.text.split())!=6:
     	await message.reply("**Read help of kspam.**")
-    txt=message.text.split("",maxsplit=1)[1]
+    txt=message.text.split(" ",maxsplit=1)[1]
     count,delay,msg=txt.split(" | ")
     await message.delete()
     for i in range(count):
