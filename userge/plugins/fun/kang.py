@@ -93,7 +93,7 @@ async def kang_(message: Message):
 
         u_name = user.username
         u_name = "@" + u_name if u_name else user.first_name or user.id
-        packname = f"a{user.id}_by_x_{pack}"
+        packname = f"a{user.id}_by_k_{pack}"
         custom_packnick = Config.CUSTOM_PACK_NAME or f"{u_name}'s kang pack"
         packnick = f"{custom_packnick} Vol.{pack}"
         cmd = "/newpack"
@@ -123,7 +123,7 @@ async def kang_(message: Message):
                 limit = "50" if is_anim else "120"
                 while limit in msg.text:
                     pack += 1
-                    packname = f"a{user.id}_by_userge_{pack}"
+                    packname = f"a{user.id}_by_k_{pack}"
                     packnick = f"{custom_packnick} Vol.{pack}"
                     if is_anim:
                         packname += "_anim"
@@ -157,12 +157,12 @@ async def kang_(message: Message):
                             await message.delete()
                         else:
                             out = (
-                                "__kanged__"
+                                "__Aka Ne Tum Noob Ko Link dene se na boke hai🙂__"
                                 if "-s" in message.flags
-                                else f"[kanged](t.me/addstickers/{packname})"
+                                else f"[Yaha](t.me/addstickers/{packname})"
                             )
                             await message.edit(
-                                f"**Sticker** {out} __in a Different Pack__**!**"
+                                f"**Aka sticker leliya hai🤓.Hame sticker yaha milega👉** {out} _Dusri jaga rakha hai sticker pehli jaga full hogay thi aka😅__**!**"
                             )
                         return
                 await conv.send_document(photo)
@@ -211,11 +211,11 @@ async def kang_(message: Message):
             await message.delete()
         else:
             out = (
-                "__kanged__"
+                "__Aka Ne Tum Noob Ko Link dene se na boke hai🙂__"
                 if "-s" in message.flags
-                else f"[kanged](t.me/addstickers/{packname})"
+                else f"[Yaha](t.me/addstickers/{packname})"
             )
-            await message.edit(f"**Sticker** {out}**!**")
+            await message.edit(f"**Aka sticker leliya hai🤓.Hame sticker yaha milega👉** {out}**!**")
         if os.path.exists(str(photo)):
             os.remove(photo)
 
