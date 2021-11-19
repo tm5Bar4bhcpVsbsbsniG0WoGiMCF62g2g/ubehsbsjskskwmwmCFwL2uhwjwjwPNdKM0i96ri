@@ -24,7 +24,7 @@ async def kspam(message: Message):
     txt=message.text.split(" ",maxsplit=1)[1]
     count,delay,msg=txt.split(" | ")
     await message.delete()
-    for i in range(count):
+    for i in range(int(count)):
     	m=await message.reply(msg)
-    	await asyncio.sleep(delay)
+    	await asyncio.sleep(int(delay))
     	await m.delete()
